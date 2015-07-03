@@ -26,7 +26,6 @@ public class HomePage {
         ReadProperties readProperties = new ReadProperties();
         String url = readProperties.getTestUrl();
         driver.get(url);
-        (new WebDriverWait(driver, 50)).until(ExpectedConditions.urlToBe(url));
         return new HomePage(driver);
     }
 
@@ -111,48 +110,48 @@ public class HomePage {
     public void assertMinSpeedIsDisplayed(){
         Pattern pattern = Pattern.compile("Min: \\d+");
         Matcher matcher = pattern.matcher(getMinSpeed());
-        org.testng.Assert.assertTrue(matcher.matches(), "Minimum speed is displayed");
+        Assert.assertTrue("Minimum speed is displayed", matcher.matches());
     }
 
     public void assertMaxSpeedIsDisplayed(){
         Pattern pattern = Pattern.compile("Max: \\d+");
         Matcher matcher = pattern.matcher(getMaxSpeed());
-        org.testng.Assert.assertTrue(matcher.matches(), "Maximum speed is displayed");
+        Assert.assertTrue("Maximum speed is displayed", matcher.matches());
     }
 
     public void assertAvgSpeedIsDisplayed(){
         Pattern pattern = Pattern.compile("Avg: \\d+");
         Matcher matcher = pattern.matcher(getAvgSpeed());
-        org.testng.Assert.assertTrue(matcher.matches(), "Average speed is displayed");
+        Assert.assertTrue("Average speed is displayed", matcher.matches());;
     }
 
     public void assertCurrentSpeedIsDisplayed(){
         Pattern pattern = Pattern.compile("\\d+");
         Matcher matcher = pattern.matcher(getCurrentSpeed());
-        org.testng.Assert.assertTrue(matcher.matches(), "Current speed is displayed");
+        Assert.assertTrue("Current speed is displayed", matcher.matches());
     }
 
     public void assertMinAltitudeIsDisplayed(){
         Pattern pattern = Pattern.compile("Min: \\d+");
         Matcher matcher = pattern.matcher(getMinAltitude());
-        org.testng.Assert.assertTrue(matcher.matches(), "Minimum altitude is displayed");
+        Assert.assertTrue("Minimum altitude is displayed", matcher.matches());
     }
 
     public void assertMaxAltitudeIsDisplayed(){
         Pattern pattern = Pattern.compile("Max: \\d+");
         Matcher matcher = pattern.matcher(getMaxAltitude());
-        org.testng.Assert.assertTrue(matcher.matches(), "Maximum altitude is displayed");
+        Assert.assertTrue("Maximum altitude is displayed", matcher.matches());
     }
 
     public void assertAvgAltitudeIsDisplayed(){
         Pattern pattern = Pattern.compile("Avg: \\d+");
         Matcher matcher = pattern.matcher(getAvgAltitude());
-        org.testng.Assert.assertTrue(matcher.matches(), "Average altitude is displayed");
+        Assert.assertTrue("Average altitude is displayed", matcher.matches());
     }
 
     public void assertCurrentAltitudeIsDisplayed(){
         Pattern pattern = Pattern.compile("\\d+");
         Matcher matcher = pattern.matcher(getCurrentAltitude());
-        org.testng.Assert.assertTrue(matcher.matches(), "Current altitude is displayed");
+        Assert.assertTrue("Current altitude is displayed", matcher.matches());
     }
 }

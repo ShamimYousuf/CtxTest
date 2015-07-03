@@ -28,7 +28,7 @@ public class ControlsTest extends AbstractTestClass {
         homePage.waitForPageLoad();
         String currentFlapPosition = homePage.getFlapsPosition();
         homePage.dragAndDropTheFlaps();
-        Assert.assertNotEquals("Flap is moved to a new position", currentFlapPosition, homePage.getFlapsPosition());
+        Assert.assertNotSame("Flap is moved to a new position", currentFlapPosition, homePage.getFlapsPosition());
     }
 
     @Test   //REQ: 5

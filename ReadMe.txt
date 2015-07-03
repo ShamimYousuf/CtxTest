@@ -20,5 +20,5 @@ First time run:
 How to run a Test:
 There are number of ways
 Option 1) Open the project in Intellij, right click the classes ControlsTest or GaugeDisplayTest and click Run ControlsTest or Run GaugeDisplayTest
-Option 2) Navigate to JavaSelenium in Terminal and run mvn test (I did not run this as I got some issues in my mac after OS upgrade.)
+Option 2) Navigate to JavaSelenium in Terminal and run mvn clean install, then mvn test.
 Option 3) Right click the test folder and Mark as Test sources root. Then right click the test folder and click Run All Tests
